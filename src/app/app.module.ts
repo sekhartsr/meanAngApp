@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule, Routes } from "@angular/router";
-
+import { DataTablesModule } from "angular-datatables";
 import { AppComponent } from "./app.component";
 import { BookComponent } from "./book/book.component";
 import { BookDetailComponent } from "./book-detail/book-detail.component";
@@ -50,12 +50,13 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    DataTablesModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, BookComponent]
 })
 export class AppModule {}

@@ -6,24 +6,23 @@
     </a>
   </h1>
   </div>
-  <div class="table-responsive">
-    <table class="table table-striped table-bordered table-hover">
-      <thead style="font: solid; background: lightgray">
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Action <a [routerLink]="['/book-create']" class="btn btn-default btn-sm">
+
+  <table datatable class="table table-striped table-bordered table-hover row-border hover">
+    <thead class="headclass">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Action <a [routerLink]="['/book-create']" class="btn btn-default btn-sm">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
               </a></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let book of books">
-          <td>{{ book.title }}</td>
-          <td>{{ book.author }}</td>
-          <td><a [routerLink]="['/book-details', book._id]">Show Details</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td><a [routerLink]="['/book-details', book._id]">Show Details</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>

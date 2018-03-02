@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
+import { BrowserModule } from "@angular/platform-browser";
+
 @Component({
   selector: "app-book",
   templateUrl: "./book.component.html",
